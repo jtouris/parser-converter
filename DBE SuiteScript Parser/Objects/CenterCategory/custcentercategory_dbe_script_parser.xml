@@ -1,0 +1,13 @@
+<centercategory scriptid="custcentercategory_dbe_script_parser">
+  <center>BASIC</center>
+  <centertab>BASICCENTERCUSTOMIZATION</centertab>
+  <label>DBE Script Parser</label>
+  <links>
+    <link>
+      <linklabel></linklabel>
+      <linkobject>[scriptid=customscript_script_parser_suitelet.customdeploy_script_parser_suitelet]</linkobject>
+      <linktasktype>SCRIPT</linktasktype>
+      <shortlist>F</shortlist>
+    </link>
+  </links>
+</centercategory>

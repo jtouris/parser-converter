@@ -1,0 +1,22 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+  <projectname>DBE SuiteScript Parser</projectname>
+  <frameworkversion>1.0</frameworkversion>
+  <dependencies>
+    <features>
+      <feature required="true">CUSTOMRECORDS</feature>
+      <feature required="false">EXTREMELIST</feature>
+      <feature required="false">CREATESUITEBUNDLES</feature>
+      <feature required="false">MAILMERGE</feature>
+      <feature required="false">MULTILANGUAGE</feature>
+      <feature required="true">SERVERSIDESCRIPTING</feature>
+      <feature required="false">MATRIXITEMS</feature>
+      <feature required="false">CUSTOMSEGMENTS</feature>
+      <feature required="false">CRM</feature>
+    </features>
+    <objects>
+    </objects>
+    <files>
+    </files>
+    <applications/>
+  </dependencies>
+</manifest>

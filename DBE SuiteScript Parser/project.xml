@@ -1,0 +1,9 @@
+<project info="SuiteCloud IDE generated file, do not edit." setAttributesOnUpdate="false">
+  <folder name="DBE SuiteScript Parser" bundleable="false" exclude="false">
+    <folder name="FileCabinet" bundleable="false" exclude="false">
+      <folder name="SuiteScripts" bundleable="false" exclude="false">
+        <file name="mapreduce_db_script_parser.js" bundleable="false" hideInBundle="false" isOnline="false" textFileEncoding="_utf8"/>
+      </folder>
+    </folder>
+  </folder>
+</project>

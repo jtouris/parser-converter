@@ -1,0 +1,19 @@
+<customlist scriptid="customlist_parse_by_type">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>Parse By Type</name>
+  <customvalues>
+    <customvalue scriptid="val_106923_t945841_609">
+      <abbreviation>R</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Record Type</value>
+    </customvalue>
+    <customvalue scriptid="val_106924_t945841_360">
+      <abbreviation>I</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Internal Ids</value>
+    </customvalue>
+  </customvalues>
+</customlist>
