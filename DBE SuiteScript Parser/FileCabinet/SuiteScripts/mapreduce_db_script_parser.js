@@ -2230,7 +2230,7 @@ define([
 						//4. internal suitelet / restlet calls
 
 						//get recommendations
-						if(	loop ){
+						if(	loop && requiresMethodRecommendation(module, method)){
 							if(line)
 								recommendation += recCount + '. (Line: ' + line.line + ') - ';
 							else
@@ -2423,7 +2423,8 @@ define([
 				recCount++
 			}
 
-			if(!recommendation || recommendation == ''){
+			if(recommendation == ''){
+                log.debug('recommendation', recommendation)
 				recCount = 0;
 				recommendation += 'No recommendations for this script';
 			}
@@ -2441,7 +2442,19 @@ define([
 				apiCount: apiCount, //number of APIs
 				recCount: recCount //number of recommendations
 			};
-		}
+        }
+        
+        /**
+         * Verifies if the method requires a performance recommendation
+         * @param {string} module 
+         * @param {string} method 
+         */
+        function requiresMethodRecommendation(module, method)
+        {
+            return !module ? (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' 
+            || method == 'nlapiLookupField' || method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord' 
+            || method == 'nlapiLogExecution')) : true;
+        }
 
 		/**
 		 * Parent level summary
