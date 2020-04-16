@@ -714,9 +714,7 @@ define([
 					obj.name = script.parameters[l].name;
 					log.debug('parsedParam value', obj.value);
 					log.debug('parsedParam name', obj.name);
-					if (obj.name != 'underscore') { //Added by V.A
 						script.parsedParameters.push(obj);
-					} //Added by V.A
 				}
 
 				// getting the file names for the non native modules/libraries
