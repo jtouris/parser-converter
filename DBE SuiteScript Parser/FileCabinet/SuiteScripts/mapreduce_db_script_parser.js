@@ -23,17 +23,17 @@
  **/
 
 define([
-		'./Library/esprima',
-		'./Library/library_db_parser_mappings',
-		'N/file',
-		'N/log',
-		'N/record',
-		'N/runtime',
-		'N/search'
-		/* './NS_SSConverter_API', */
-		/* './NS_SSConverter_Const', */
-	],
-	function(
+	'./Library/esprima',
+	'./Library/library_db_parser_mappings',
+	'N/file',
+	'N/log',
+	'N/record',
+	'N/runtime',
+	'N/search'
+	/* './NS_SSConverter_API', */
+	/* './NS_SSConverter_Const', */
+],
+	function (
 		esprima,
 		mappings,
 		file,
@@ -309,7 +309,7 @@ define([
 
 				// sets the script masterid to the masterid of the master parser custom record
 				masterId = id.masterId;
-				////log.debug('masterId', masterId);
+				log.debug('masterId', masterId);
 
 				// Get the metadata about the script from the script record
 				if (id && id.type == 'script') {
@@ -320,6 +320,7 @@ define([
 					});
 					//scriptName
 					scriptFile = result.scriptfile[0].text
+					log.debug('reduce: ', 'scriptFile: ' + scriptFile);
 					main = _extractScript(scriptFile, result.apiversion, true, id.id);
 				} else {
 					result = search.lookupFields({
@@ -389,7 +390,7 @@ define([
 				else
 					lines += "The library files have a combined line count of: " + lineObj.lib + " \n";
 
-				//log.debug('result!!!!!!!!', result);
+				log.debug('result!!!!!!!!', result);
 
 				var custRec = record.create({
 					type: 'customrecord_parse_details',
@@ -551,11 +552,12 @@ define([
 				content: fileObj.getContents(),
 				folder: fileObj.folder
 			}
+			log.audit('_extractScript', 'file name: ' + fileContents.name);
 			// converts file contents into a parsable object, loc will display the line numbers
 			var syntax = esprima.parseModule(fileContents.content, {
 				loc: true
 			});
-			//log.debug('apiversion', apiversion);
+			log.debug('apiversion', apiversion);
 
 
 			//ST. 1.0 APIs
@@ -565,7 +567,7 @@ define([
 				if (syntax.loc)
 					script.lines = syntax.loc.end.line - syntax.loc.start.line;
 				for (var g = 0; g < syntax.body.length; g++) {
-					//log.debug('syntax body: ' + g, syntax.body[g]);
+					//	log.debug('syntax body: ' + g, syntax.body[g]);
 
 					// pushing everything into the array, could have done script.scriptFunctions = syntax.body
 					script.scriptFunctions.push(syntax.body[g]);
@@ -686,17 +688,24 @@ define([
 					// passes list of libraries to script.dependencies
 					script.dependencies = new Array(); //; 1.0 library files
 					for (var q = 0; q < rec.getLineCount({
-							sublistId: 'libraries'
-						}); q++) {
-						var libraryName = rec.getSublistValue({
+						sublistId: 'libraries'
+					}); q++) {
+						//VA - read 1.0 libraries
+						var libraryId = rec.getSublistValue({
 							sublistId: 'libraries',
-							fieldId: 'scriptfile_display',
+							//fieldId: 'scriptfile_display',
+							fieldId: 'scriptfile',
 							line: q
 						});
+						var objLibraryFile = file.load({
+							id: libraryId
+						});
+						var libraryName = objLibraryFile.name;
+						log.audit('libraryName_1.0: ', 'libraryName: ' + libraryName);
 						script.dependencies.push(_extractScript(libraryName, '1.0', false));
-					}
+					} //VA end
 
-					//log.debug('script.entryFunctions', script.entryFunctions);
+					log.debug('script.entryFunctions', script.entryFunctions);
 				}
 
 			}
@@ -726,17 +735,17 @@ define([
 					var obj = {};
 
 					if (functionArguments[l].value.indexOf('N/') > -1) {
-						//log.debug(title, 'is a native module');
+						log.debug(title, 'is a native module');
 						obj.native = true;
 					} else {
-						//log.debug(title, 'not a native module');
+						log.debug(title, 'not a native module');
 						obj.native = false;
 					}
 					obj.value = functionArguments[l].value;
 					obj.name = script.parameters[l].name;
-					//log.debug('parsedParam value', obj.value);
-					//log.debug('parsedParam name', obj.name);
-					script.parsedParameters.push(obj);
+					log.debug('parsedParam value', obj.value);
+					log.debug('parsedParam name', obj.name);
+						script.parsedParameters.push(obj);
 				}
 
 				// getting the file names for the non native modules/libraries
@@ -750,22 +759,22 @@ define([
 							scriptName = val.value.substr(index + 1) + ".js";
 						else
 							scriptName = val.value + ".js";
-						//log.debug('_extractScript scriptName', scriptName);
-						//log.debug(title, 'Is not a native module, pushing to dependencies array');
+						log.debug('_extractScript scriptName', scriptName);
+						log.debug(title, 'Is not a native module, pushing to dependencies array');
 						script.dependencies.push(_extractScript(scriptName, apiversion, false));
 					}
 				}
 
 				//check for return statement
 				// will only return true if the elem.type is equal to NAMES.RETURN_STATEMENT and will only store it in the returnstatement array
-				returnStatement = script.scriptFunctions.filter(function(elem, index, array) {
+				returnStatement = script.scriptFunctions.filter(function (elem, index, array) {
 					return elem.type === NAMES.RETURN_STATEMENT;
 				});
 
 				//extract entry functions
 				// returns outer most return functions properties could have done entryFunctions=returnStatement[0].argument.properties
 				if (entryFunctions = returnStatement[0].argument.properties) {
-					entryFunctions = returnStatement[0].argument.properties.filter(function(elem, index, array) {
+					entryFunctions = returnStatement[0].argument.properties.filter(function (elem, index, array) {
 
 						return elem;
 					});
@@ -781,7 +790,7 @@ define([
 			var allFunctions = new Array();
 			var globalValues = new Array();
 			// map is native javascript to loop through the array
-			script.scriptFunctions.map(function(elem, index, array) {
+			script.scriptFunctions.map(function (elem, index, array) {
 				var type = elem.type;
 				// find all variable declarations
 				if (type === NAMES.VARIABLE_DECLARATION && elem.declarations) {
@@ -1013,11 +1022,11 @@ define([
 				obj.type == NAMES.ASSIGNMENT_EXPRESSION ||
 				obj.type == NAMES.CALL_EXPRESSION) {
 				if (obj.callee && obj.callee.property && (
-						obj.callee.property.name == 'forEach' ||
-						obj.callee.property.name == 'map' ||
-						obj.callee.property.name == 'reduce' ||
-						obj.callee.property.name == 'filter'
-					)) {
+					obj.callee.property.name == 'forEach' ||
+					obj.callee.property.name == 'map' ||
+					obj.callee.property.name == 'reduce' ||
+					obj.callee.property.name == 'filter'
+				)) {
 					if (obj.arguments.length > 0 && obj.arguments[0] &&
 						obj.arguments[0].body) {
 						buildTree(obj.arguments[0].body, functionDetails, loop, modules, condition);
@@ -1182,8 +1191,8 @@ define([
 					val = val.callee;
 
 					if ((current.object &&
-							assign &&
-							assign.name == current.object.name) ||
+						assign &&
+						assign.name == current.object.name) ||
 						(assign &&
 							assign.name == current.type &&
 							current.name == 'nlapiSubmitRecord')
@@ -1206,9 +1215,9 @@ define([
 					val.assign &&
 					val.nsmod && //TODO 3-4-2019
 					((current.object &&
-							val.assign &&
-							val.assign.name == current.object.name
-						) ||
+						val.assign &&
+						val.assign.name == current.object.name
+					) ||
 						(val.assign &&
 							val.assign.name == current.type &&
 							current.name == 'nlapiSubmitRecord'
@@ -1320,8 +1329,8 @@ define([
 					val = val.callee;
 
 					if ((current.object &&
-							assign &&
-							assign.name == current.object.name) ||
+						assign &&
+						assign.name == current.object.name) ||
 						(assign &&
 							assign.name == current.type &&
 							current.name == 'nlapiSubmitRecord')
@@ -1363,8 +1372,8 @@ define([
 					val.assign &&
 					val.nsmod && //TODO 3-4-2019
 					((current.object &&
-							val.assign &&
-							val.assign.name == current.object.name) ||
+						val.assign &&
+						val.assign.name == current.object.name) ||
 						(val.assign &&
 							val.assign.name == current.type &&
 							current.name == 'nlapiSubmitRecord')
@@ -1383,8 +1392,8 @@ define([
 				if (val &&
 					val.arguments &&
 					((current.object &&
-							val.arguments &&
-							val.arguments.name == current.object.name) ||
+						val.arguments &&
+						val.arguments.name == current.object.name) ||
 						(val.arguments &&
 							val.arguments.name == current.type &&
 							current.name == 'nlapiSubmitRecord')
@@ -1621,7 +1630,7 @@ define([
 			var apiObj = {};
 			//1.0 parameters
 			if (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' || method == 'nlapiLookupField' ||
-					method == 'nlapiSubmitRecord')) {
+				method == 'nlapiSubmitRecord')) {
 				if (arguments.length > 0) {
 					if (arguments[0] && arguments[0].type == NAMES.LITERAL) {
 						//log.debug('arguments[0]', arguments[0]);
@@ -1643,8 +1652,8 @@ define([
 								parameter = argument.properties[m];
 								if (parameter.key && parameter.value) {
 									if ((
-											parameter.key.name == 'type' ||
-											parameter.key.name == 'Type') &&
+										parameter.key.name == 'type' ||
+										parameter.key.name == 'Type') &&
 										parameter.value) {
 										//MEMBER EXPRESSION
 										if (
@@ -1926,7 +1935,7 @@ define([
 							var isModule = false;
 
 							if (main.parsedParameters) {
-								main.parsedParameters.filter(function(n) {
+								main.parsedParameters.filter(function (n) {
 
 									if (initObj &&
 										initObj.object &&
@@ -2187,7 +2196,7 @@ define([
 						linenum = op.lineStart;
 
 						if (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' || method == 'nlapiLookupField' ||
-								method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
+							method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
 							html += "<font size = '3'>" + num + ".";
 							for (var e = 0; e < (5 - num.toString().length); e++) {
 								html += "&nbsp;&nbsp;";
@@ -2315,7 +2324,7 @@ define([
 							UE = true;
 
 						if (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' || method == 'nlapiLookupField' ||
-								method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
+							method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
 							if (opList.length == 0)
 								opList.push({
 									method: method,
@@ -2548,7 +2557,7 @@ define([
 					arr: opList[j].arr
 				});
 				if (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' || method == 'nlapiLookupField' ||
-						method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
+					method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
 					if (result.htmlStr &&
 						(
 							result.htmlStr.indexOf('null') > -1 ||
@@ -2558,7 +2567,7 @@ define([
 						summary += '' + result.totalCount + ' ' + opList[j].method + '(s)\n';
 					else
 						summary += '' + result.totalCount + ' ' + opList[j].method + '(s) ' +
-						' on ' + result.htmlStr;
+							' on ' + result.htmlStr;
 
 					apiCount += parseInt(result.totalCount);
 				} else if (method.indexOf('nlapi') < 0) {
@@ -2573,7 +2582,7 @@ define([
 					//TODO temp workaround for null types/records
 					else
 						summary += '' + result.totalCount + ' ' + opList[j].module + ' ' + opList[j].method + '(s) ' +
-						' on ' + result.htmlStr;
+							' on ' + result.htmlStr;
 
 					apiCount += parseInt(result.totalCount);
 				}
@@ -2649,7 +2658,7 @@ define([
 					arr: typeArr
 				});
 				if (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' || method == 'nlapiLookupField' ||
-						method == 'nlapiSubmitRecord')) {
+					method == 'nlapiSubmitRecord')) {
 					summary += '' + result.totalCount + ' ' + opList[j].method +
 						' on ' + result.htmlStr;
 				} else if (method.indexOf('nlapi') > -1 && method == 'nlapiRequestURL') {
@@ -2774,13 +2783,13 @@ define([
 
 			var errors = "";
 
-			summary.reduceSummary.errors.iterator().each(function(k, v) {
+			summary.reduceSummary.errors.iterator().each(function (k, v) {
 				log.error(LOG_TITLE, 'Error=' + k + '; ' + v);
 				errors += "Error parsing out script: ";
 				errors += k + '; ' + v + "\n";
 			});
 
-			summary.output.iterator().each(function(key, value) {
+			summary.output.iterator().each(function (key, value) {
 				if (value) {
 
 					//4-9-2019 checking for errors here;
