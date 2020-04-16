@@ -717,6 +717,8 @@ define([
 				// pulls main function
 				script.mainFunction = syntax.body[0].expression.arguments[1]; //the main function
 				// could have been script.mainFunction.body.body gives you all of the functions in the script
+
+				if(!script.mainFunction) return; // FE: 4/16/20 avoid failure no non-NS libraries
 				script.scriptFunctions = syntax.body[0].expression.arguments[1].body.body; //array of all the functions, global variables, return statement
 				//gives script line count
 				if (syntax.body[0].loc && syntax.body[0].loc.start) {
