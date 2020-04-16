@@ -2410,17 +2410,14 @@ define([
 						//4. internal suitelet / restlet calls
 
 						//get recommendations
-						if (loop) {
-							log.debug('module', module)
-							if ((method != 'nlapiGetLineItemValue') && (method != 'nlapiSetLineItemValue')) {
-								if (line)
-									recommendation += recCount + '. (Line: ' + line.line + ') - ';
-								else
-									recommendation += recCount;
-								recommendation += ' The ' + module + ' ' + method + ' operation is within a for-loop. If there are many iterations,' +
-									' the governance limit may be reached and/or may affect performance. \n\n';
-								recCount++;
-							}
+						if(	loop && requiresMethodRecommendation(module, method)){
+							if(line)
+								recommendation += recCount + '. (Line: ' + line.line + ') - ';
+							else
+								recommendation += recCount;
+							recommendation += ' The ' + module + ' ' + method + ' operation is within a for-loop. If there are many iterations,'+
+								' the governance limit may be reached and/or may affect performance. \n\n';
+							recCount++;
 						}
 						//log.debug('!module: ' + module + 'method: ' + method);
 						if (
@@ -2622,7 +2619,19 @@ define([
 				apiCount: apiCount, //number of APIs
 				recCount: recCount //number of recommendations
 			};
-		}
+        }
+        
+        /**
+         * Verifies if the method requires a performance recommendation
+         * @param {string} module 
+         * @param {string} method 
+         */
+        function requiresMethodRecommendation(module, method)
+        {
+            return !module ? (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' 
+            || method == 'nlapiLookupField' || method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord' 
+            || method == 'nlapiLogExecution')) : true;
+        }
 
 		/**
 		*  FE: 4/15/20 - Issues 6 & 7
