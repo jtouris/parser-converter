@@ -348,6 +348,34 @@ define([
 				var lineObj = {};
 				lineObj.main = numLines;
 				lineObj.lib = totalLibraryLineCount;
+
+				//FE: 4/15/20 - Issues 6 & 7 - On each operation determine the parent and if it´s inside a loop
+				if(main && main.functionList && parsedObj && parsedObj.functions) {
+					var operations = main.functionList.map(function(f){ return f.operations; });
+					operations = [].concat.apply([], operations);
+
+					for (var i = 0; i < parsedObj.functions.length; i++) {
+						var obj = parsedObj.functions[i];
+
+						var functionName = obj.fname || (obj.operation && obj.operation.method);
+						if (functionName == '') continue;
+
+						var parent = operations.filter(function (f) {
+							return f.method == functionName || (f.callee && f.callee.name == functionName || (f.init && f.init.callee && f.init.callee.name == functionName))
+						}).map(function (x) {
+							return x.parent
+						});
+						var loop = operations.filter(function (f) {
+							return f.method == functionName || (f.callee && f.callee.name == functionName || (f.init && f.init.callee && f.init.callee.name == functionName))
+						}).map(function (x) {
+							return x.loop;
+						});
+						obj.parent = obj.parent || (parent && parent[0]);
+						obj.loop = obj.loop || (loop && loop[0]);
+					}
+				}
+				//End Issues 6 & 7
+
 				//document data in custom record
 				var summary = getSummary(parsedObj);
 				summary.lineCount = lineObj;
@@ -428,9 +456,12 @@ define([
 					fieldId: 'custrecord_parent_master_summary',
 					value: masterId
 				});
+
+				//FE: 4/15/20: Prevent exceeding 4000 characters
+				var recommendation = summary.recommendation? summary.recommendation.substr(0, 3999): '';
 				custRec.setValue({
 					fieldId: 'custrecord_parse_api_efficiency',
-					value: summary.recommendation
+					value: recommendation
 				});
 				custRec.setValue({
 					fieldId: 'custrecord_total_operations_found',
@@ -1027,6 +1058,9 @@ define([
 					result.loop = loop;
 
 				//log.debug('result', result);
+
+				//FE: 4/15/20 - Issues 6 & 7 - need to identify the parent function to check later if it´s inside a loop
+				result.parent = functionDetails.functionName;
 
 				if (obj.arguments) {
 					result.params = obj.arguments //parameters of the function call
@@ -2269,7 +2303,9 @@ define([
 						module = op.module;
 						nsmod = op.nsmod;
 						method = op.method;
-						loop = op.loop; //if the operation is within a loop
+						//FE: 4/15/20 - Issues 6 & 7 - Mark operation as loop if it´s directly inside the loop or
+						// one of it's parents is inside the loop
+						loop = op.loop || isOperationInLoop(op, arr); //if the operation is within a loop
 						saveFound = op.saveFound //if there a save for the load/create equivalent
 						line = op.lineStart;
 						type = op.type;
@@ -2577,6 +2613,27 @@ define([
 				apiCount: apiCount, //number of APIs
 				recCount: recCount //number of recommendations
 			};
+		}
+
+		/**
+		*  FE: 4/15/20 - Issues 6 & 7
+		* This function checks if one of the parents has loop = true
+		* */
+		function isOperationInLoop(op, arr) {
+			if (op.loop) {
+				return true;
+			}
+			else {
+				var parent = op.parent;
+				if (parent) {
+					for (var i = 0; i < arr.length; i++) {
+						if (arr[i].fname == parent) {
+							return isOperationInLoop(arr[i], arr);
+						}
+					}
+				}
+				return false;
+			}
 		}
 
 		/**

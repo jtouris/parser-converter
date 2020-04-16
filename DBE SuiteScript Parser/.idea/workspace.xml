@@ -1,13 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="603290a9-3f4e-4b7b-afc2-10cda98ca4db" name="Default Changelist" comment="" />
+    <list default="true" id="603290a9-3f4e-4b7b-afc2-10cda98ca4db" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Parser.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/netsuite.sign" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/netsuite.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/netsuite.pkey" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/netsuite.pkey" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/engine_versions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/engine_versions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/addressform_fieldid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/addressform_fieldid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/advancedpdftemplate_standard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/advancedpdftemplate_standard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/allrecord_script_deployment_recordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/allrecord_script_deployment_recordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/centercategory_tasktype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/centercategory_tasktype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/configurable_features.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/configurable_features.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/countries.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/countries.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/crmcustomfield_searchcomparefield.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/crmcustomfield_searchcomparefield.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_columndelimiter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_columndelimiter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_customrecordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_customrecordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_customtransactiontype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_customtransactiontype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_datahandling.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_datahandling.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_decimaldelimiter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_decimaldelimiter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_encoding.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_encoding.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_entryform_standard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_entryform_standard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_recordtypes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_recordtypes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_referencetype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_referencetype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_transactionform_standard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimport_transactionform_standard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimports_entryformrecordtypes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimports_entryformrecordtypes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimports_transactionformrecordtypes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/csvimports_transactionformrecordtypes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_accesstype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_accesstype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_permission_restriction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_permission_restriction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_permittedlevel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_permittedlevel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_permittedrole.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_permittedrole.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_tasktype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customrecordtype_tasktype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_access_search_level.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_access_search_level.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_crm_application_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_crm_application_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_crm_sourcelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_crm_sourcelist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_entities_application_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_entities_application_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_entities_sourcelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_entities_sourcelist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_fieldtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_fieldtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_items_application_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_items_application_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_items_sourcelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_items_sourcelist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_items_subtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_items_subtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_otherrecords_application_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_otherrecords_application_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_parent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_parent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionbody_application_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionbody_application_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionbody_sourcelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionbody_sourcelist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionline_application_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionline_application_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionline_sourcelist.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_transactionline_sourcelist.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_valuesdisplayorder.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customsegment_valuesdisplayorder.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_classification_position.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_classification_position.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_creditsupportstyles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_creditsupportstyles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_filterbyaccounttype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_filterbyaccounttype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_statuses_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_statuses_id.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_subliststyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_subliststyle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_subliststyle_salesandpurchase.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/customtransactiontype_subliststyle_salesandpurchase.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/dashboard_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/dashboard_layout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/dashboard_mode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/dashboard_mode.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/emailtemplate_recordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/emailtemplate_recordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/engine_versions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/engine_versions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_buttonid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_buttonid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_fieldid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_fieldid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_standard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_standard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_sublistid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_sublistid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_subtabid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_subtabid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_tabid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/entryform_tabid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/execution_context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/execution_context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/feature_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/feature_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/features.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/features.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/forbidden_features.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/forbidden_features.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/form_buttonstyle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/form_buttonstyle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/form_displaytype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/form_displaytype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/form_fieldposition.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/form_fieldposition.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_accesslevel_searchlevel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_accesslevel_searchlevel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_body_tab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_body_tab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_centercategory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_centercategory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_centertab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_centertab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_centertype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_centertype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_crm_tab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_crm_tab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_custom_record_icon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_custom_record_icon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_displaytype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_displaytype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_dynamicdefault.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_dynamicdefault.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_fieldtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_fieldtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_fldfiltercomparetype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_fldfiltercomparetype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_onparentdelete.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_onparentdelete.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_parentsubtab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_parentsubtab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_selectrecordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customfield_selectrecordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customrecordothercustomfield_field.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customrecordothercustomfield_field.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customrecordothercustomfield_rectype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_customrecordothercustomfield_rectype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_day_of_month.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_day_of_month.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_day_of_week.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_day_of_week.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_entity_tab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_entity_tab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_item_tab.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_item_tab.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_itemoptionitemcol_field.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_itemoptionitemcol_field.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_itemoptionitemcol_fieldtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_itemoptionitemcol_fieldtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_itemoptionitemcol_searchcomparefield.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_itemoptionitemcol_searchcomparefield.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_month.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_month.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_order_of_week.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_order_of_week.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_permission.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_permission.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_permission_level.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_permission_level.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_portlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_portlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_portletcolumn.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_portletcolumn.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_repeat_time.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_repeat_time.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_repeat_time_in_minutes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_repeat_time_in_minutes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_role.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_role.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_savedsearches_daterange.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_savedsearches_daterange.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_savedsearches_period.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_savedsearches_period.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_field.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_field.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_recordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_recordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_task.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_task.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_template.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_transactions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_standard_transactions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_tab_parent.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_tab_parent.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_tab_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_tab_type.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_task.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_task.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_year_month.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/generic_year_month.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/hiding_actions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/hiding_actions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/itemcustomfield_itemsubtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/itemcustomfield_itemsubtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/itemnumbercustomfield_field.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/itemnumbercustomfield_field.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_daterange.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_daterange.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_daterange_or_period.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_daterange_or_period.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_daterange_report.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_daterange_report.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_period.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_ranges_period.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_custom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_custom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_daterange.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_daterange.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_daterange_or_period.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_daterange_or_period.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_formula.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_formula.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpi_snapshots_internal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_comparisons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_comparisons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_highlight_conditions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_highlight_conditions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_highlight_icons.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_highlight_icons.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_useperiods.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/kpiscorecards_useperiods.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/locking_actions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/locking_actions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/plugintype_deployment_model.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/plugintype_deployment_model.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/plugintype_loglevel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/plugintype_loglevel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/plugintype_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/plugintype_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_calendar_agenda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_calendar_agenda.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_backgroundtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_backgroundtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_charttheme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_charttheme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_drilldown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_drilldown.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_savedsearch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_customsearch_savedsearch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_kpi_employees.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_kpi_employees.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_kpi_highlightif.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_kpi_highlightif.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_kpimeter_combined_snapshots.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_kpimeter_combined_snapshots.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_list_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_list_type.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_quicksearch_generic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_quicksearch_generic.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_quicksearch_transaction.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_quicksearch_transaction.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_quicksearch_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_quicksearch_type.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_backgroundtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_backgroundtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_charttheme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_charttheme.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_charttype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_charttype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_trendtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/portlet_trendgraph_trendtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/reminders_highlighting_rules_colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/reminders_highlighting_rules_colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/reminders_standard_reminders_with_days.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/reminders_standard_reminders_with_days.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/reminders_standard_reminders_without_days.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/reminders_standard_reminders_without_days.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/report_date_range.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/report_date_range.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/report_period_range.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/report_period_range.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_centertype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_centertype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_fullrestrictions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_fullrestrictions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_restrict.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_restrict.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_restrictions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_restrictions.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_restrictionsegment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/role_restrictionsegment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_deploymentmodel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_deploymentmodel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_eventtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_eventtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_frequency.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_frequency.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_loglevel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_loglevel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_portlettype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_portlettype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_recurrenceminutes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_recurrenceminutes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_returnrecordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_returnrecordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_scripttype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_scripttype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_setting.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_setting.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_starttime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_starttime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/script_status.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/scriptdeployment_recordtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/scriptdeployment_recordtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_custom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_custom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_date_range_comparable.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_date_range_comparable.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_date_range_not_comparable.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_date_range_not_comparable.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_period_range_comparable.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_period_range_comparable.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_period_range_not_comparable.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_period_range_not_comparable.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_trendgraph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/snapshot_type_trendgraph.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/sublist_standard_fields.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/sublist_standard_fields.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/suiteletdeployment_tasktype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/suiteletdeployment_tasktype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_advancedtemplate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_advancedtemplate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_buttonid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_buttonid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_checkboxdefault.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_checkboxdefault.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_columnid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_columnid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_fieldid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_fieldid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_htmllayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_htmllayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_pdflayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_pdflayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_standard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_standard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_sublistid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_sublistid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_subtabid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_subtabid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_tabid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/transactionform_tabid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/translationcollection_defaultlanguage.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/translationcollection_defaultlanguage.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/webapp_entrytype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/webapp_entrytype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_condition_type.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_condition_type.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_eventtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_eventtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_keephistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_keephistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_order_of_week.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_order_of_week.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_releasestatus.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_releasestatus.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_sublists.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_sublists.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_timeunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_timeunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_triggertype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflow_triggertype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_attachmenttype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_attachmenttype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_buttonid.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_buttonid.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_createline_position.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_createline_position.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_displaytype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_displaytype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_eventtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_eventtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_radioschedulemode.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_radioschedulemode.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_recipienttype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_recipienttype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_sendertype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_sendertype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_transtatementtype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_transtatementtype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_triggertype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_triggertype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_triggertype_client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_triggertype_client.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_valuedate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_valuedate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_valuetype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowaction_valuetype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowtransition_triggertype.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/list/workflowtransition_triggertype.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/sdf_metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/sdf_metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/sdf_metadata.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/suiteapp/metadata/1.0/sdf_metadata.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileCabinet/SuiteScripts/mapreduce_db_script_parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/FileCabinet/SuiteScripts/mapreduce_db_script_parser.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="DEV" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YxAtrMKqIxzRgWpu8rhqaW2sBG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +242,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="SvnConfiguration">
@@ -34,6 +268,8 @@
       <workItem from="1583950766234" duration="6041000" />
       <workItem from="1584473738089" duration="33000" />
       <workItem from="1584473772215" duration="273000" />
+      <workItem from="1586887062713" duration="14692000" />
+      <workItem from="1587059353789" duration="600000" />
     </task>
     <servers />
   </component>
@@ -45,10 +281,18 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2073" y="68" key="#Custom_Plugin_Repositories/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1583945503173" />
+    <state x="122" y="51" key="DiffContextDialog" timestamp="1586964061280">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="122" y="51" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1586964061280" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1584473766665">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1584473766665" />
+    <state x="405" y="52" key="RollbackChangesDialog" timestamp="1586964062941">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="405" y="52" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1586964062941" />
     <state x="2" y="0" key="SettingsEditor" timestamp="1583945564985">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
