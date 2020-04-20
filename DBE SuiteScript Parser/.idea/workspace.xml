@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="603290a9-3f4e-4b7b-afc2-10cda98ca4db" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileCabinet/SuiteScripts/Library/library_db_parser_mappings.js" beforeDir="false" afterPath="$PROJECT_DIR$/FileCabinet/SuiteScripts/Library/library_db_parser_mappings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FileCabinet/SuiteScripts/mapreduce_db_script_parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/FileCabinet/SuiteScripts/mapreduce_db_script_parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Objects/Scripts/customscript_script_parser_suitelet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Objects/Scripts/customscript_script_parser_suitelet.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,7 @@
       <workItem from="1587059353789" duration="600000" />
       <workItem from="1587131646797" duration="6551000" />
       <workItem from="1587151777463" duration="5431000" />
-      <workItem from="1587390128900" duration="1384000" />
+      <workItem from="1587390128900" duration="3166000" />
     </task>
     <task id="LOCAL-00001" summary="Avoid failure with non-NS libraries like underscore.js">
       <created>1587074461546</created>
@@ -68,29 +66,47 @@
       <option name="project" value="LOCAL" />
       <updated>1587074461546</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Issue 12 initial commit">
+      <created>1587392682556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587392682556</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Avoid failure with non-NS libraries like underscore.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avoid failure with non-NS libraries like underscore.js" />
+    <MESSAGE value="Issue 12 initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Issue 12 initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2073" y="68" key="#Custom_Plugin_Repositories" timestamp="1583945503173">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2073" y="68" key="#Custom_Plugin_Repositories/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1583945503173" />
-    <state x="213" y="0" key="CommitChangelistDialog2" timestamp="1587074460006">
+    <state x="213" y="0" key="CommitChangelistDialog2" timestamp="1587392680889">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="213" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1587074460006" />
-    <state x="122" y="51" key="DiffContextDialog" timestamp="1586964061280">
+    <state x="213" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1587392680889" />
+    <state x="122" y="51" width="1024" height="572" maximized="true" key="DiffContextDialog" timestamp="1587395116042">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="122" y="51" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1586964061280" />
+    <state x="122" y="51" width="1024" height="572" maximized="true" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1587395116042" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1587387127922">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -104,9 +120,13 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="2" y="0" key="SettingsEditor/0.0.1280.680/1920.0.1920.1040@0.0.1280.680" timestamp="1583945564985" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1587074466459">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1587392689209">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1587074466459" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1587392689209" />
+    <state x="334" y="72" width="612" height="536" key="find.popup" timestamp="1587392734250">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="334" y="72" width="612" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1587392734250" />
   </component>
 </project>

@@ -2323,8 +2323,7 @@ define([
 						if (fname && (fname.indexOf('beforeSubmit') > -1 || fname.indexOf('afterSubmit') > -1))
 							UE = true;
 
-						if (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' || method == 'nlapiLookupField' ||
-							method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord')) {
+						if(method.indexOf('nlapi') > -1 && requiresMethodRecommendation('', method)){
 							if (opList.length == 0)
 								opList.push({
 									method: method,
