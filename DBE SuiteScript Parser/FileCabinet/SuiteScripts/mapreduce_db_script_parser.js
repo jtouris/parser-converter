@@ -2628,9 +2628,10 @@ define([
          */
         function requiresMethodRecommendation(module, method)
         {
-            return !module ? (method.indexOf('nlapi') > -1 && (method == 'nlapiLoadRecord' || method == 'nlapiSubmitField' 
-            || method == 'nlapiLookupField' || method == 'nlapiRequestURL' || method == 'nlapiSubmitRecord' 
-            || method == 'nlapiLogExecution')) : true;
+        	//FE: 4/17/20 - Issue 12: return true only for methods that consume units
+        	var validModule = module && module.indexOf('N/') == -1? 'N/' + module: module;
+			return mappings.usage[validModule] &&
+				mappings.usage[validModule][method];
         }
 
 		/**

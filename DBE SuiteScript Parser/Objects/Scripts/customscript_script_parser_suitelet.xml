@@ -23,7 +23,7 @@
       <links>
         <link>
           <linkcategory>BASICLISTSCUSTOM</linkcategory>
-          <linklabel></linklabel>
+          <linklabel>DBE Script Parser Suitelet</linklabel>
         </link>
       </links>
     </scriptdeployment>

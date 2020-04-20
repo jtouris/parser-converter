@@ -55,27 +55,148 @@ define([],
 					'custom': 2,
 					'other': 5
 				},
-			},
-			'N/search':{
-				'lookupFields': {
+				'copy': {
 					'transaction': 10,
 					'custom': 2,
 					'other': 5
 				},
-				'create': 0,
-				'load' : {
+				'delete': {
+					'transaction': 20,
+					'custom': 4,
+					'other': 10
+				},
+				'transform': {
 					'transaction': 10,
 					'custom': 2,
 					'other': 5
-				}
+				},
+				'detach': 10
+			},
+			'N/search':{
+				'lookupFields': 1,
+				'runPaged': 5,
+				'save': 5,
+				'delete': 5,
+				'load': 5,
+				'duplicates': 10,
+				'global': 10
+			},
+			'N/cache':{
+				'get': 1, //TODO: if loader is present governance is 2
+				'put': 1,
+				'remove' : 1
 			},
 			'N/https':{
 				'post': 10,
-				'get':10
+				'get':10,
+				'put':10,
+				'delete':10,
+				'request':10,
+				'renderPdf': 10
 			},
 			'N/https':{
 				'post': 10,
-				'get':10
+				'get':10,
+				'put':10,
+				'delete':10,
+				'request':10
+			},
+			'N/config':{
+				'load': 10
+			},
+			'N/email':{
+				'send': 20,
+				'sendBulk': 10,
+				'sendCampaignEvent': 10
+			},
+			'N/file':{
+				'save': 20,
+				'delete': 20,
+				'load': 10
+			},
+			'N/redirect':{
+				'toSavedSearch': 5,
+				'toSavedSearchResult': 5
+			},
+			'N/render':{
+				'bom': 10,
+				'packingSlip': 10,
+				'pickingTicket': 10,
+				'statement': 10,
+				'transaction': 10,
+				'xmlToPdf': 10
+			},
+			'N/sso':{
+				'generateSuiteSignOnToken': 20
+			},
+			'N/transaction':{
+				'void': 10
+			},
+			'N/action':{
+				'executeBulk': 50
+			},
+			'N/auth':{
+				'changeEmail': 10,
+				'changePassword': 10
+			},
+			'N/certificateControl':{
+				'save': 10,
+				'createCertificate': 10,
+				'deleteCertificate': 10,
+				'findCertificates': 10,
+				'findUsages': 10,
+				'loadCertificate': 10
+			},
+			'N/crypto/certificate':{
+				'createSigner': 10,
+				'createVerifier': 10,
+				'verifyXmlSignature': 10,
+				'signXml': 10,
+			},
+			'N/currency':{
+				'exchangeRate': 10
+			},
+			'N/format/i18n':{
+				'format': 10,
+				'getCurrencyFormatter': 10,
+				'getNumberFormatter': 10,
+			},
+			'N/https/clientCertificate':{
+				'delete': 10,
+				'get': 10,
+				'post': 10,
+				'put': 10,
+				'request': 10,
+			},
+			'N/keyControl':{
+				'createKey': 10,
+				'deleteKey': 10,
+				'findKeys': 10,
+				'loadKey': 10,
+			},
+			'N/piremoval':{
+				'deleteTask': 20,
+				'run': 20,
+				'save': 20,
+				'deleteTask': 20,
+			},
+			'N/query':{
+				'run': 10,
+				'run.promise': 10,
+				'runPaged': 10,
+				'runPaged.promise': 10,
+				'delete': 10,
+				'load': 10,
+				'load.promise': 10,
+				'runSuiteQL': 10,
+				'runSuiteQLPaged': 10
+			},
+			'N/task/accounting/recognition':{
+				'checkStatus': 50
+			},
+			'N/workflow':{
+				'initiate': 20,
+				'trigger': 20
 			},
 			'':{
 				'nlapiLoadRecord':{
@@ -98,7 +219,22 @@ define([],
 					'custom': 4,
 					'other': 10
 				},
-				'nlapiSubmitRecord':{
+				'nlapiCreateRecord':{
+					'transaction': 10,
+					'custom': 2,
+					'other': 5
+				},
+				'nlapiCopyRecord':{
+					'transaction': 10,
+					'custom': 2,
+					'other': 5
+				},
+				'nlapiTransformRecord':{
+					'transaction': 10,
+					'custom': 2,
+					'other': 5
+				},
+				'nlapiDeleteRecord':{
 					'transaction': 20,
 					'custom': 4,
 					'other': 10
@@ -106,6 +242,78 @@ define([],
 				'nlapiRequestURL':{
 					'': 10,
 				},
+				'nlapiSearchRecord':{
+					'': 10,
+				},
+				'nlapiSearchGlobal':{
+					'': 10,
+				},
+				'nlapiScheduleScript':{
+					'': 20,
+				},
+				'nlapiRequestURL':{
+					'': 10,
+				},
+				'nlapiSendEmail':{
+					'': 10,
+				},
+				'nlapiExchangeRate':{
+					'': 10,
+				},
+				'nlapiInitiateWorkflow':{
+					'': 20,
+				},
+				'nlapiTriggerWorkflow':{
+					'': 20,
+				},
+				'nlapiGetLogin':{
+					'': 10,
+				},
+				'nlapiLoadConfiguration':{
+					'': 10,
+				},
+				'nlapiSubmitConfiguration':{
+					'': 20,
+				},
+				'nlapiSendCampaignEmail':{
+					'': 10,
+				},
+				'nlapiDeleteFile':{
+					'': 20,
+				},
+				'nlapiSubmitFile':{
+					'': 20,
+				},
+				'nlapiLoadFile':{
+					'': 10,
+				},
+				'nlapiVoidTransaction':{
+					'': 10,
+				},
+				'nlapiAttachRecord':{
+					'': 10,
+				},
+				'nlapiDetachRecord':{
+					'': 10,
+				},
+				'nlapiMergeRecord':{
+					'': 10,
+				},
+				'nlapiRequestURLWithCredentials':{
+					'': 10,
+				},
+				'nlapiXMLToPDF':{
+					'': 10,
+				},
+				'nlapiLoadSearch':{
+					'': 5,
+				},
+				'nlapiSetRecoveryPoint':{
+					'': 100,
+				},
+				'nlapiSubmitCSVImport':{
+					'': 100,
+				}
 			}
 
 		};
