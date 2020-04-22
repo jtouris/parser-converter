@@ -351,10 +351,11 @@ define([
 				lineObj.lib = totalLibraryLineCount;
 
 				//FE: 4/15/20 - Issues 6 & 7 - On each operation determine the parent and if it´s inside a loop
+				var unusedVariables = {};
 				if(main && main.functionList && parsedObj && parsedObj.functions) {
 					var operations = main.functionList.map(function(f){ return f.operations; });
 					operations = [].concat.apply([], operations);
-
+					log.audit('operations', operations);
 					for (var i = 0; i < parsedObj.functions.length; i++) {
 						var obj = parsedObj.functions[i];
 
@@ -374,11 +375,36 @@ define([
 						obj.parent = obj.parent || (parent && parent[0]);
 						obj.loop = obj.loop || (loop && loop[0]);
 					}
+
+					//FE: 4/21/20 - Issue 13
+					var scriptVars = operations.filter(function (f) {
+						return f.type == 'VariableDeclarator' //TODO: replace with var
+					}).map(function (x) {
+						if(x.id){
+							return {
+								name: x.id.name,
+								operation: x
+							}
+						}
+					});
+					log.audit('scriptVars', scriptVars);
+
+					//Check if every variable is used
+					for (var j = 0; j < scriptVars.length; j++) {
+						var varName = scriptVars[j].name;
+						var functionName = scriptVars[j].operation && scriptVars[j].operation.parent;
+						if(!varName) continue;
+
+						if(!isVariableUsed(operations, functionName, varName)){
+							unusedVariables[varName] = scriptVars[j].operation;
+						}
+					}
+					log.audit('unusedVariables', unusedVariables);
 				}
 				//End Issues 6 & 7
 
 				//document data in custom record
-				var summary = getSummary(parsedObj);
+				var summary = getSummary(parsedObj, unusedVariables);
 				summary.lineCount = lineObj;
 				//log.debug('grade', summary.initGrade);
 
@@ -2276,7 +2302,7 @@ define([
 		/**
 		 * Child level summary
 		 */
-		function getSummary(parsedObj) {
+		function getSummary(parsedObj, unusedVariables) {
 			// main functions
 			var arr = parsedObj.functions;
 			var opList = new Array();
@@ -2602,6 +2628,22 @@ define([
 				recCount++
 			}
 
+			//FE: 4/21/20 - Issue 13 - check for unused variables
+			for(var unusedVar in unusedVariables){
+				var opDetails = unusedVariables[unusedVar];
+
+				var line = opDetails && opDetails.loc &&
+					opDetails.loc.start? opDetails.loc.start.line: null;
+
+				if (line)
+					recommendation += recCount + '. (Line: ' + line + ') - ';
+				else
+					recommendation += recCount;
+
+				recommendation += ' The variable "' + unusedVar + '" is declared but never used.';
+				recCount++;
+			}
+
 			if (!recommendation || recommendation == '') {
 				recCount = 0;
 				recommendation += 'No recommendations for this script';
@@ -2654,6 +2696,26 @@ define([
 				}
 				return false;
 			}
+		}
+
+		/**
+		* FE: 4/21/20 - Issue 13
+		* This function returns a boolean indicating if variable is used in the
+		* function where it is declared.
+		* */
+		function isVariableUsed(operations, functionName, varName){
+			var usedOperations = operations.filter(function(o){
+				return (!functionName || o.parent == functionName) &&
+					(
+						o.params && o.params.some(function(f){ //Is variable used as param
+							return f.name && f.name == varName;
+						})
+						|| (o.left && o.left.name == varName)  //Is variable assigned value
+						|| (o.right && o.right.name == varName) //Is variable used on right side statement
+					);
+			});
+
+			return usedOperations && usedOperations.length > 0;
 		}
 
 		/**

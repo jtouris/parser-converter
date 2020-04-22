@@ -188,11 +188,11 @@ function(ui,
             	 //load rec
             	 var rec = record.load({type: result.recordType, id: result.id});
             	 var recType = rec.getValue({fieldId: 'rectype'});
-            	 base+= recType;
+                 var partialURL = base + recType;
                  sublist.setSublistValue({
                      id : 'id',
                      line : j,
-                     value : base + '&id=' + result.id
+                     value : partialURL + '&id=' + result.id
                  });
 
                  j++
