@@ -351,11 +351,11 @@ define([
 				lineObj.lib = totalLibraryLineCount;
 
 				//FE: 4/15/20 - Issues 6 & 7 - On each operation determine the parent and if it´s inside a loop
-				var unusedVariables = {};
+				var unusedVarsDict = {};
 				if(main && main.functionList && parsedObj && parsedObj.functions) {
 					var operations = main.functionList.map(function(f){ return f.operations; });
 					operations = [].concat.apply([], operations);
-					log.audit('operations', operations);
+
 					for (var i = 0; i < parsedObj.functions.length; i++) {
 						var obj = parsedObj.functions[i];
 
@@ -377,8 +377,8 @@ define([
 					}
 
 					//FE: 4/21/20 - Issue 13
-					var scriptVars = operations.filter(function (f) {
-						return f.type == 'VariableDeclarator' //TODO: replace with var
+					var scriptVarsArr = operations.filter(function (f) {
+						return f.type == NAMES.VARIABLE_DECLARATOR
 					}).map(function (x) {
 						if(x.id){
 							return {
@@ -387,24 +387,37 @@ define([
 							}
 						}
 					});
-					log.audit('scriptVars', scriptVars);
+
+					//Get global variables
+					var globalVarsArr = main.globalValues.filter(function (f) {
+						return f.type == NAMES.VARIABLE_DECLARATOR
+					}).map(function (x) {
+						if(x.id){
+							return {
+								name: x.id.name,
+								operation: x
+							}
+						}
+					});
+
+					scriptVarsArr = scriptVarsArr.concat(globalVarsArr);
 
 					//Check if every variable is used
-					for (var j = 0; j < scriptVars.length; j++) {
-						var varName = scriptVars[j].name;
-						var functionName = scriptVars[j].operation && scriptVars[j].operation.parent;
+					for (var j = 0; j < scriptVarsArr.length; j++) {
+						var varName = scriptVarsArr[j].name;
+						var functionName = scriptVarsArr[j].operation && scriptVarsArr[j].operation.parent;
 						if(!varName) continue;
 
-						if(!isVariableUsed(operations, functionName, varName)){
-							unusedVariables[varName] = scriptVars[j].operation;
+						if(!isVariableUsed(operations, functionName, varName, main.scriptFunctions)){
+							unusedVarsDict[varName] = scriptVarsArr[j].operation;
 						}
 					}
-					log.audit('unusedVariables', unusedVariables);
+					log.audit('unusedVarsDict', unusedVarsDict);
 				}
 				//End Issues 6 & 7
 
 				//document data in custom record
-				var summary = getSummary(parsedObj, unusedVariables);
+				var summary = getSummary(parsedObj, unusedVarsDict);
 				summary.lineCount = lineObj;
 				//log.debug('grade', summary.initGrade);
 
@@ -2302,7 +2315,7 @@ define([
 		/**
 		 * Child level summary
 		 */
-		function getSummary(parsedObj, unusedVariables) {
+		function getSummary(parsedObj, unusedVarsDict) {
 			// main functions
 			var arr = parsedObj.functions;
 			var opList = new Array();
@@ -2629,8 +2642,8 @@ define([
 			}
 
 			//FE: 4/21/20 - Issue 13 - check for unused variables
-			for(var unusedVar in unusedVariables){
-				var opDetails = unusedVariables[unusedVar];
+			for(var unusedVar in unusedVarsDict){
+				var opDetails = unusedVarsDict[unusedVar];
 
 				var line = opDetails && opDetails.loc &&
 					opDetails.loc.start? opDetails.loc.start.line: null;
@@ -2640,7 +2653,7 @@ define([
 				else
 					recommendation += recCount;
 
-				recommendation += ' The variable "' + unusedVar + '" is declared but never used.';
+				recommendation += ' The variable "' + unusedVar + '" is declared but never used. \n\n';
 				recCount++;
 			}
 
@@ -2703,19 +2716,53 @@ define([
 		* This function returns a boolean indicating if variable is used in the
 		* function where it is declared.
 		* */
-		function isVariableUsed(operations, functionName, varName){
-			var usedOperations = operations.filter(function(o){
-				return (!functionName || o.parent == functionName) &&
-					(
-						o.params && o.params.some(function(f){ //Is variable used as param
-							return f.name && f.name == varName;
-						})
-						|| (o.left && o.left.name == varName)  //Is variable assigned value
-						|| (o.right && o.right.name == varName) //Is variable used on right side statement
-					);
-			});
+		function isVariableUsed(operations, functionName, varName, scriptFunctions){
 
-			return usedOperations && usedOperations.length > 0;
+			//If it's not a global variable keep only operations from the function where var is defined
+			//Also remove the variable declaration
+			operations = operations.filter(function(o){ return (!functionName || o.parent == functionName) &&
+				!(o.type == NAMES.VARIABLE_DECLARATOR && o.id && o.id.name == varName ) });
+
+			var usedOperations = findByName(operations, varName);
+
+			//Re-check in whole script functions to avoid showing invalid information
+			var ocurrencesArr = [];
+			if(!usedOperations || usedOperations == undefined)
+				findOcurrencesByName(scriptFunctions, varName, ocurrencesArr);
+
+			return (usedOperations && usedOperations != undefined) || ocurrencesArr.length >= 2;
+		}
+
+		//Recursive function to find if JSON has a property 'name' with value = varName
+		function findByName(o, name) {
+			//Early return
+			if(!o || o.name === name ){
+				return o;
+			}
+			var result, p;
+			for (p in o) {
+				if( o.hasOwnProperty(p) && typeof o[p] === 'object' ) {
+					result = findByName(o[p], name);
+					if(result){
+						return result;
+					}
+				}
+			}
+			return result;
+		}
+
+		//Retrieves all ocurrences of a variable by name. Adds the results to an array passed to the function.
+		function findOcurrencesByName(o, name, resultsArr) {
+
+			if(o && o.name === name ){
+				resultsArr.push(o);
+			}
+			var p;
+			for (p in o) {
+				if( o.hasOwnProperty(p) && typeof o[p] === 'object' ) {
+					findOcurrencesByName(o[p], name, resultsArr);
+				}
+			}
 		}
 
 		/**
